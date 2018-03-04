@@ -1,4 +1,4 @@
-ANTLR=../antlr-4.7.1-complete.jar
+ANTLR=../../antlr-4.7.1-complete.jar
 G_FILE=Calc.g4
 INPUT=input.txt
 MAIN=Main

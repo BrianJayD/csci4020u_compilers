@@ -23,7 +23,7 @@ NEWLINE
 WS
 
 rule names:
-prog
+progg
 stmt
 expr
 

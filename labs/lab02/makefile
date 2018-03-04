@@ -1,4 +1,4 @@
-ANTLR=../antlr-4.7.1-complete.jar
+ANTLR=../../antlr-4.7.1-complete.jar
 G_FILE=Hello.g4
 MAIN_FILE=Main
 INPUT_FILE=input.c

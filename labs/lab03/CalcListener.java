@@ -7,15 +7,15 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface CalcListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link CalcParser#prog}.
+	 * Enter a parse tree produced by {@link CalcParser#progg}.
 	 * @param ctx the parse tree
 	 */
-	void enterProg(CalcParser.ProgContext ctx);
+	void enterProgg(CalcParser.ProggContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CalcParser#prog}.
+	 * Exit a parse tree produced by {@link CalcParser#progg}.
 	 * @param ctx the parse tree
 	 */
-	void exitProg(CalcParser.ProgContext ctx);
+	void exitProgg(CalcParser.ProggContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CalcParser#stmt}.
 	 * @param ctx the parse tree
