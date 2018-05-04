@@ -15,13 +15,13 @@ public class CalcBaseListener implements CalcListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgg(CalcParser.ProggContext ctx) { }
+	@Override public void enterProg(CalcParser.ProgContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgg(CalcParser.ProggContext ctx) { }
+	@Override public void exitProg(CalcParser.ProgContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

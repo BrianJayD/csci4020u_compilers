@@ -1,0 +1,3 @@
+0, alex, ta
+1, michael, student
+2, ken, prof

@@ -1,0 +1,4 @@
+x = 3
+y = 2
+z = if (x>y) {x} else {y}
+-> z

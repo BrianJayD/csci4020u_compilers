@@ -1,0 +1,8 @@
+function larger(x, y) {
+  if(x>y) {
+    x
+  } else {
+    y
+  }
+}
+-> larger(3, 2)

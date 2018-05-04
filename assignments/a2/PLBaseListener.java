@@ -15,25 +15,61 @@ public class PLBaseListener implements PLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProg(PLParser.ProgContext ctx) { }
+	@Override public void enterProgram(PLParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProg(PLParser.ProgContext ctx) { }
+	@Override public void exitProgram(PLParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLine(PLParser.LineContext ctx) { }
+	@Override public void enterStatement(PLParser.StatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLine(PLParser.LineContext ctx) { }
+	@Override public void exitStatement(PLParser.StatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterWhileLoop(PLParser.WhileLoopContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitWhileLoop(PLParser.WhileLoopContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFuncInvoke(PLParser.FuncInvokeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFuncInvoke(PLParser.FuncInvokeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAssignment(PLParser.AssignmentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssignment(PLParser.AssignmentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -51,13 +87,13 @@ public class PLBaseListener implements PLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLoop(PLParser.LoopContext ctx) { }
+	@Override public void enterBooleanExpr(PLParser.BooleanExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLoop(PLParser.LoopContext ctx) { }
+	@Override public void exitBooleanExpr(PLParser.BooleanExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -70,18 +106,6 @@ public class PLBaseListener implements PLListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDataExpr(PLParser.DataExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterBool(PLParser.BoolContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitBool(PLParser.BoolContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

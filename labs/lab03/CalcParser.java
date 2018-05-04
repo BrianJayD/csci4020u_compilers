@@ -18,9 +18,9 @@ public class CalcParser extends Parser {
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, INT=7, NEWLINE=8, WS=9;
 	public static final int
-		RULE_progg = 0, RULE_stmt = 1, RULE_expr = 2;
+		RULE_prog = 0, RULE_stmt = 1, RULE_expr = 2;
 	public static final String[] ruleNames = {
-		"progg", "stmt", "expr"
+		"prog", "stmt", "expr"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
@@ -78,30 +78,30 @@ public class CalcParser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
-	public static class ProggContext extends ParserRuleContext {
+	public static class ProgContext extends ParserRuleContext {
 		public List<StmtContext> stmt() {
 			return getRuleContexts(StmtContext.class);
 		}
 		public StmtContext stmt(int i) {
 			return getRuleContext(StmtContext.class,i);
 		}
-		public ProggContext(ParserRuleContext parent, int invokingState) {
+		public ProgContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_progg; }
+		@Override public int getRuleIndex() { return RULE_prog; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CalcListener ) ((CalcListener)listener).enterProgg(this);
+			if ( listener instanceof CalcListener ) ((CalcListener)listener).enterProg(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CalcListener ) ((CalcListener)listener).exitProgg(this);
+			if ( listener instanceof CalcListener ) ((CalcListener)listener).exitProg(this);
 		}
 	}
 
-	public final ProggContext progg() throws RecognitionException {
-		ProggContext _localctx = new ProggContext(_ctx, getState());
-		enterRule(_localctx, 0, RULE_progg);
+	public final ProgContext prog() throws RecognitionException {
+		ProgContext _localctx = new ProgContext(_ctx, getState());
+		enterRule(_localctx, 0, RULE_prog);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);

@@ -1,4 +1,4 @@
-ANTLR=../antlr-4.7.1-complete.jar
+ANTLR=../../antlr-4.7.1-complete.jar
 G_FILE=Midterm.g4
 MAIN=Main
 JSON=dummy.JSON

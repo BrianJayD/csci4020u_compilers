@@ -7,25 +7,55 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface PLListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link PLParser#prog}.
+	 * Enter a parse tree produced by {@link PLParser#program}.
 	 * @param ctx the parse tree
 	 */
-	void enterProg(PLParser.ProgContext ctx);
+	void enterProgram(PLParser.ProgramContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PLParser#prog}.
+	 * Exit a parse tree produced by {@link PLParser#program}.
 	 * @param ctx the parse tree
 	 */
-	void exitProg(PLParser.ProgContext ctx);
+	void exitProgram(PLParser.ProgramContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link PLParser#line}.
+	 * Enter a parse tree produced by {@link PLParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterLine(PLParser.LineContext ctx);
+	void enterStatement(PLParser.StatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PLParser#line}.
+	 * Exit a parse tree produced by {@link PLParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitLine(PLParser.LineContext ctx);
+	void exitStatement(PLParser.StatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PLParser#whileLoop}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhileLoop(PLParser.WhileLoopContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PLParser#whileLoop}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhileLoop(PLParser.WhileLoopContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PLParser#funcInvoke}.
+	 * @param ctx the parse tree
+	 */
+	void enterFuncInvoke(PLParser.FuncInvokeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PLParser#funcInvoke}.
+	 * @param ctx the parse tree
+	 */
+	void exitFuncInvoke(PLParser.FuncInvokeContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PLParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignment(PLParser.AssignmentContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PLParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignment(PLParser.AssignmentContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PLParser#declaration}.
 	 * @param ctx the parse tree
@@ -37,15 +67,15 @@ public interface PLListener extends ParseTreeListener {
 	 */
 	void exitDeclaration(PLParser.DeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link PLParser#loop}.
+	 * Enter a parse tree produced by {@link PLParser#booleanExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterLoop(PLParser.LoopContext ctx);
+	void enterBooleanExpr(PLParser.BooleanExprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PLParser#loop}.
+	 * Exit a parse tree produced by {@link PLParser#booleanExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitLoop(PLParser.LoopContext ctx);
+	void exitBooleanExpr(PLParser.BooleanExprContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PLParser#dataExpr}.
 	 * @param ctx the parse tree
@@ -56,14 +86,4 @@ public interface PLListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitDataExpr(PLParser.DataExprContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link PLParser#bool}.
-	 * @param ctx the parse tree
-	 */
-	void enterBool(PLParser.BoolContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PLParser#bool}.
-	 * @param ctx the parse tree
-	 */
-	void exitBool(PLParser.BoolContext ctx);
 }

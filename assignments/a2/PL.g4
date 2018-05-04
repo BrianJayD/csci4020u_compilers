@@ -1,33 +1,41 @@
 grammar PL;
 
-prog  : line+;
+program: statement+;
 
-line  : NEWLINE
+statement: NEWLINE
       | declaration NEWLINE
-      | loop NEWLINE
+      | assignment NEWLINE
+      | funcInvoke NEWLINE
+      | whileLoop NEWLINE
       ;
 
-declaration: 'declare' VARIABLE ASMT dataExpr
-      ;
+whileLoop  : 'while' booleanExpr '{' statement+ '}';
 
-loop  : 'while' bool '{'
-      | 'while' bool 'or' bool '{'
-      | 'while' bool 'and' bool '{'
+funcInvoke: ID '(' dataExpr ')';
+
+assignment: ID ASMT dataExpr;
+
+declaration: 'declare' assignment;
+
+booleanExpr: ID BOOL INT
+      | ID BOOL ID
+      | booleanExpr 'and' booleanExpr
+      | booleanExpr 'or' booleanExpr
+      | '(' booleanExpr ')'
       ;
 
 dataExpr  : INT
-      | '(' dataExpr ')'
+      | ID
       | dataExpr '+' dataExpr
       | dataExpr '*' dataExpr
       | dataExpr '-' dataExpr
       | dataExpr '/' dataExpr
+      | dataExpr ',' dataExpr
+      | '(' dataExpr ')'
       ;
 
-bool  : VARIABLE BOOL INT
-      | '(' bool ')'
-      ;
 
-VARIABLE: [a-zA-Z]+;
+ID: [a-zA-Z]+;
 
 INT   : [0-9]+
       ;
